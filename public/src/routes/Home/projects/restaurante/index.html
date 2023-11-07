@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" href="assets/icon48.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<title>Duende Lanches</title>
+<style>
+  .quantity-button {
+    border-radius: 50%;
+    width: 30px;
+    background-color: #FFD700;
+    box-shadow: 0 -4px rgb(21 108 0 / 50%) inset, 0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset, 4px 0 rgb(21 108 0 / 50%) inset;
+
+  }
+
+  .quantity-button:hover {
+    transition: .7s cubic-bezier(0, .8, .26, .99);
+    background-color: #a18900;
+    box-shadow: none;
+  }
+
+  .number-quantity {
+    padding: 0.25rem;
+    border-radius: 35%;
+    text-align: center;
+    width: 50px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .subbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .btn{
+    background-color: #FFD700;
+    font-weight: bold;
+    box-shadow: 0 -4px rgb(21 108 0 / 50%) inset, 0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset, 4px 0 rgb(21 108 0 / 50%) inset;
+  }
+
+  .btn:hover {
+    transition: .7s cubic-bezier(0, .8, .26, .99);
+    background-color: #a18900;
+    box-shadow: none;
+  }
+</style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center">
+        <img src="assets/icon96.png" alt="Logo" width="50" height="44" class="d-inline-block align-text-top">
+        <span class="ms-2 title">Duende Lanches</span>
+      </a>
+    </div>
+  </nav>
+  <main>
+    <section>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/carousel1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/carousel2.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <Section class="m-5 text">
+      <h1>
+        Cardápio on-line, peça e receba no conforto da sua casa!
+      </h1>
+    </Section>
+    <form action="pedidos.php" method="post">
+      <h2 class="m-5 text">Lanches:</h2>
+      <section class="m-1 p-1">
+        <ul id="myUL">
+          <li>
+            <img src="assets/megastacker.png" class="lanche" width="400" height="320">
+            <div class="lanchebox">
+              <h3>Mega Duende</h3>
+              <div class="quantity-container m-auto quantity">
+                <button class="quantity-button" type="button" onclick="decrementQuantity('Mega Duende')">-</button>
+                <input type="text" class="number-quantity" name="lanches[Mega Duende]" id="Mega Duende" value="0">
+                <button class="quantity-button" type="button" onclick="incrementQuantity('Mega Duende')">+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="assets/whopperduplo.png" class="lanche" width="400" height="320">
+            <div>
+              <h3>Duende Saladão</h3>
+              <div class="quantity-container">
+                <button class="quantity-button" type="button" onclick="decrementQuantity('Duende Saladão')">-</button>
+                <input type="text" class="number-quantity" name="lanches[Duende Saladão]" id="Duende Saladão" value="0">
+                <button class="quantity-button" type="button" onclick="incrementQuantity('Duende Saladão')">+</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="m-1 p-1">
+        <h2 class="m-5 text">Refris:</h2>
+        <ul id="myUL2">
+          <li>
+            <img src="assets/guarana.png" class="lanche" width="400" height="320">
+            <div>
+              <h3>Guaraná Lata</h3>
+              <div class="quantity-container">
+                <button class="quantity-button" type="button" onclick="decrementQuantity('Guaraná Lata')">-</button>
+                <input type="text" class="number-quantity" name="refris[Guaraná Lata]" id="Guaraná Lata" value="0">
+                <button class="quantity-button" type="button" onclick="incrementQuantity('Guaraná Lata')">+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="assets/coca.png" class="lanche" width="400" height="320">
+            <div>
+              <h3>Coca-Cola Lata</h3>
+              <div class="quantity-container">
+                <button class="quantity-button" type="button" onclick="decrementQuantity('Coca-Cola Lata')">-</button>
+                <input type="text" class="number-quantity" name="refris[Coca-Cola Lata]" id="Coca-Cola Lata" value="0">
+                <button class="quantity-button" type="button" onclick="incrementQuantity('Coca-Cola Lata')">+</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="m-1 p-1">
+        <h2 class="m-5 text">Sobremesas:</h2>
+        <ul id="myUL3">
+          <li>
+            <img src="assets/milkshake1.png" class="lanche" width="400" height="320">
+            <div>
+              <h3>Milkshake de Nutella</h3>
+              <div class="quantity-container">
+                <button class="quantity-button" type="button"
+                  onclick="decrementQuantity('Milkshake de Nutella')">-</button>
+                <input type="text" class="number-quantity" name="sobremesas[Milkshake de Nutella]" id="Milkshake de Nutella"
+                  value="0">
+                <button class="quantity-button" type="button"
+                  onclick="incrementQuantity('Milkshake de Nutella')">+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="assets/pudim.png" class="lanche" width="400" height="320">
+            <div>
+              <h3>Pudim de Leite</h3>
+              <div class="quantity-container">
+                <button class="quantity-button" type="button" onclick="decrementQuantity('Pudim de Leite')">-</button>
+                <input type="text" class="number-quantity" name="sobremesas[Pudim de Leite]" id="Pudim de Leite"
+                  value="0">
+                <button class="quantity-button" type="button" onclick="incrementQuantity('Pudim de Leite')">+</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="subbtn">
+      <input class="btn" type="submit" value="Enviar Pedidos">
+    </section>
+    </div>
+    </form>
+  </main>
+  <footer>
+  </footer>
+  <script>
+    function incrementQuantity(inputId) {
+      const input = document.getElementById(inputId);
+      input.value = parseInt(input.value) + 1;
+    }
+
+    function decrementQuantity(inputId) {
+      const input = document.getElementById(inputId);
+      const value = parseInt(input.value);
+      if (value > 0) {
+        input.value = value - 1;
+      }
+    }
+  </script>
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

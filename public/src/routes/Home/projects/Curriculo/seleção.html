@@ -1,0 +1,88 @@
+﻿
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="images/icon.png">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Farsan&family=Roboto:wght@300;500&family=Tilt+Warp&display=swap"
+		rel="stylesheet">
+	<title>Análise curricular</title>
+	<style>
+        .custom-checkbox {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 4px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .checkbox-checked {
+            background-color: #4ecdc4;
+        }
+    </style>
+
+	<script>
+		function toggleCheckbox(checkboxName) {
+            const checkbox = document.querySelector(`input[name="${checkboxName}"]`);
+            checkbox.checked = !checkbox.checked;
+
+            const customCheckbox = document.querySelector(`.custom-checkbox[data-checkbox="${checkboxName}"]`);
+            customCheckbox.classList.toggle("checkbox-checked", checkbox.checked);
+        }
+	</script>
+
+</head>
+
+	<body>
+		<main>
+			<div class="topo">
+				Análise curricular
+			</div>
+			</div class="vamo">
+			<div>
+				<form action="Curriculo.php" method="POST">
+					<div class="table">
+						<div class="image" onclick="toggleCheckbox('Curriculo1')">
+							<div class="custom-checkbox" data-checkbox="Curriculo1"></div>
+							<img src="images/tomtom.webp" width=300 height=300> <br>
+							<input type="checkbox" name="Curriculo1" value="Curriculo1">
+						</div>
+						<div class="image" onclick="toggleCheckbox('Curriculo2')">
+							<div class="custom-checkbox" data-checkbox="Curriculo2"></div>
+							<img src="images/jesse.webp" width=300 height=300><br>
+							<input type="checkbox" name="Curriculo2" value="Curriculo2">
+						</div>
+					</div>
+					<div class="table">
+						<div class="image" onclick="toggleCheckbox('Curriculo3')">
+							<div class="custom-checkbox" data-checkbox="Curriculo3"></div>
+							<img src="images/jessica.jpg" width=300 height=300><br>
+							<input type="checkbox" name="Curriculo3" value="Curriculo3">
+						</div>
+						<div class="image" onclick="toggleCheckbox('Curriculo4')">
+							<div class="custom-checkbox" data-checkbox="Curriculo4"></div>
+							<img src="images/seila.jpg" width=300 height=300><br>
+							<input type="checkbox" name="Curriculo4" value="Curriculo4">
+						</div>
+					</div>
+					<div class="btn">
+						<button type="submit" value="Cadastre">Cadastre-se</button>
+					</div>
+				</form>
+			</div>
+		</main>
+		<br>
+	</body>
+
+	</html>
+</body>
+</html>

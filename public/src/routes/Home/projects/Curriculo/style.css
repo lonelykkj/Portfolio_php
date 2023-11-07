@@ -1,0 +1,183 @@
+#picture__input {
+  display: none;
+}
+
+.picture {
+  width: 400px;
+  aspect-ratio: 16/9;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  border: 2px dashed currentcolor;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: color 300ms ease-in-out, background 300ms ease-in-out;
+  outline: none;
+  overflow: hidden;
+}
+
+img {
+  --s: 250px;
+  --b: 5px; 
+  --g: 5px;
+  --c: #4ecdc4; 
+
+  width: var(--s);
+  outline: calc(var(--s) / 2) solid #0009;
+  outline-offset: calc(var(--s) / -2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+img:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: var(--g);
+}
+
+.picture:focus {
+  color: #777;
+  background: #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.picture__img {
+  max-width: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #1b1b1e;
+  background-color: #d8dbe2;
+  font-weight: bold;
+  font-size: 20px;
+  margin: auto;
+}
+
+.container {
+  width: 100%;
+  padding-right: 150px;
+  padding-left: 150px;
+  padding-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+form {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 5% 30%;
+  background-color: rgb(243, 223, 167);
+}
+
+input {
+  border: 2px solid #dcdcdc;
+  padding: 0 0 0 0.5em;
+  border-radius: 15px;
+  line-height: 25px;
+  font-size: 14px;
+  width: 50%;
+}
+
+li {
+  display: list-item;
+}
+
+select {
+  border: 2px solid #dcdcdc;
+  padding: 0 0 0 0.5em;
+  border-radius: 15px;
+  line-height: 50px;
+  height: 25px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  cursor: grabbing;
+  width: 50%;
+}
+
+button {
+  background-color: #58a4b0;
+  color: #fff;
+  padding: 0.9em 3em;
+  margin-top: 7px;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 0.6pt;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid rgb(201, 201, 201);
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #2f595f;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.topo {
+  text-align: center;
+  margin: 20px;
+}
+
+textarea {
+  border: 2px solid #dcdcdc;
+  padding: 0 0 0 0.5em;
+  border-radius: 5px;
+  line-height: 25px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.senha {
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  text-align: center;
+}
+
+.vamo {
+  font-family: arial;
+  font-size: 24px;
+  margin: 25px;
+  width: 350px;
+  height: 200px;
+  outline: dashed 1px black;
+}
+
+.image{
+  margin: 5%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}

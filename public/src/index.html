@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="stylesheet" href="components/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/icons8-lista-100.png" type="image/x-icon">
+        <title>Home</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <img src="assets/icons8-lista-100.png" alt="">
+                <h1 class="linear">PhList</h1>
+            </div>
+            <nav>
+                <ul>
+                    <a href="routes/login/login.php">
+                        <li>Login</li>
+                    </a>
+                    <a href="routes/register/register.php">
+                        <li>Registro</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <div>
+                    <div class="desc">
+                        <h2>Bem-vindo ao nosso<br>Portal de Exercícios em PHP</h2>
+                        <span>Bem-vindo ao nosso Portfólio de Exercícios PHP! Explore a magia por trás da linguagem de programação mais popular da web. Navegue por nossa coleção de desafios e projetos práticos de PHP, projetados para aprimorar suas habilidades e expandir seu conhecimento. Seja você um iniciante ansioso para aprender ou um desenvolvedor experiente em busca de inspiração, nosso portfólio é o seu destino para explorar o mundo dinâmico do PHP. Comece a codificar e eleve suas habilidades ao próximo nível</span>
+                    </div>
+                    <img src="assets/Team work-bro.png" alt="Work">
+                </div>
+            </section>
+
+            <div class="messageBox" id="messageBox">
+                <div class="txtsBoxSpam">
+                    <img src="assets/icons8-github-48.png" alt="GitHubIcon">
+                    <h2>GitHub</h2>
+                </div>
+                <div class="perfilGit" id="perfilGit">
+
+                    <div onmouseenter="fetchGitHubReadme('thepokenik', 'thepokenik')" id="judeuRepos">
+                        <a href="https://github.com/thepokenik" target="_blank">
+                            <img src="assets/judas.png" alt="">
+                            <span>Nikolas Melo</span>
+                        </a>
+                    </div>
+
+                    <div id="ryanRepos">
+                        <a onmouseenter="fetchGitHubReadme('RyanGustavoGoncalves', 'RyanGustavoGoncalves')" href="https://github.com/RyanGustavoGoncalves" target="_blank">
+                            <img src="assets/SP-Studio.png" alt="">
+                            <span>Ryan Gonçalves</span>
+                        </a>
+                    </div>
+
+                    <div id="bigodeRepos">
+                        <a onmouseenter="fetchGitHubReadme('lonelykkj', 'lonelykkj')" href="https://github.com/lonelykkj" target="_blank">
+                            <img src="assets/bigode.png" alt="">
+                            <span>Heitor Morales</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="messageBoxLkd" id="messageBoxLkd">
+                <div class="txtsBoxSpamLkd">
+                    <img src="assets/icons8-linkedin-50.png" alt="GitHubIcon">
+                    <h2>Linkedin</h2>
+                </div>
+                
+                <div class="perfilGit" id="perfilGit">
+
+                    <div onmouseenter="fetchGitHubReadme('thepokenik', 'thepokenik')" id="judeuRepos">
+                        <a href="https://github.com/thepokenik" target="_blank"> 
+                            <img src="assets/judas.png" alt="">
+                            <span>Nikolas Melo</span>
+                        </a>
+                    </div>
+
+                    <div id="ryanRepos">
+                        <a onmouseenter="fetchGitHubReadme('RyanGustavoGoncalves', 'RyanGustavoGoncalves')" href="www.linkedin.com/in/ryan-gustavo-97275226b" target="_blank">
+                            <img src="assets/SP-Studio.png" alt="">
+                            <span>Ryan Gonçalves</span>
+                        </a>
+                    </div>
+
+                    <div id="bigodeRepos">
+                        <a onmouseenter="fetchGitHubReadme('lonelykkj', 'lonelykkj')" href="https://github.com/lonelykkj" target="_blank">
+                            <img src="assets/bigode.png" alt="">
+                            <span>Heitor Morales</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal"></div>
+        </main>
+
+        <footer>
+            <div class="logoEtec">
+                <img src="assets/logo-etec.png" alt="etecIlzaPintus">
+            </div>
+            <div>
+                <h2>Projeto Programação Web ®</h2>
+                <br />
+                <span>Profº Claudinei</span>
+            </div>
+            <div class="footerInf">
+                <ul>
+                    <a href="./routes/sobre/sobre.html" target="_blank">
+                        <li>Sobre o projeto</li>
+                    </a>
+                    <br>
+                    <a href="https://www.etecsjcampos.com.br" target="_blank">
+                        <li>Nossa instituição</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footerSoc">
+                <ul>
+                    <li onclick="showMessageModal(true, messageBox)" class="gitHub">GitHub</li>
+                    <li onclick="showMessageModal(true, messageBoxLkd)">Linkedin</li>
+                </ul>
+            </div>
+        </footer>
+        <script src="components/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </body>
+</html>
